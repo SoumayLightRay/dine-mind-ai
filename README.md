@@ -3,7 +3,7 @@
 ![App Form UI](assets/ui-form.png)
 ![App Results UI](assets/ui-results.png)
 
-An intelligent, vibe-based restaurant discovery tool built with Vanilla JS, Flask, and Google Gemini LLM. It helps you find the perfect restaurant in Bangalore based on your budget, preferred cuisines, and vibe, rather than just raw keyword search.
+An intelligent, mood-based restaurant discovery tool built with Vanilla JS, Flask, and Google Gemini LLM. It helps you find the perfect restaurant in Bangalore based on your budget, preferred cuisines, and mood, rather than just raw keyword search.
 
 ## Features
 - **Fast Filtering**: In-memory pandas filtering of ~10k restaurants for sub-millisecond querying.

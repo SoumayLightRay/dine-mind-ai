@@ -1,5 +1,9 @@
 # Zomato AI Restaurant Recommender
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=flat&logo=googlebard&logoColor=white)
 ![App Form UI](assets/ui-form.png)
 ![App Results UI](assets/ui-results.png)
 

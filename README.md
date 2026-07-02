@@ -1,5 +1,8 @@
 # Zomato AI Restaurant Recommender
 
+![App Form UI](assets/ui-form.png)
+![App Results UI](assets/ui-results.png)
+
 An intelligent, vibe-based restaurant discovery tool built with Vanilla JS, Flask, and Google Gemini LLM. It helps you find the perfect restaurant in Bangalore based on your budget, preferred cuisines, and vibe, rather than just raw keyword search.
 
 ## Features

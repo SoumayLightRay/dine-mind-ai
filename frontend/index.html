@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-powered restaurant recommender inspired by Zomato. Get personalized dining suggestions based on your preferences using intelligent LLM recommendations.">
+  <title>Zomato AI Restaurant Recommender</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <noscript>
+    <div class="noscript-msg">This app requires JavaScript to run. Please enable JavaScript in your browser settings.</div>
+  </noscript>
+
+  <!-- ═══════ HEADER ═══════ -->
+  <header class="header" id="header">
+    <div class="header__brand">
+      <span class="header__logo">🍽️</span>
+      <h1 class="header__title">Zomato AI Recommender</h1>
+    </div>
+    <p class="header__subtitle">
+      Tell us what you're craving — our AI finds the perfect restaurant for you.
+    </p>
+  </header>
+
+  <!-- ═══════ MAIN ═══════ -->
+  <main class="container">
+
+    <!-- ─── Preference Form ─── -->
+    <section class="form-card" id="preference-form-card">
+      <h2 class="form-card__title">Your Dining Preferences</h2>
+
+      <form id="preference-form" class="form-grid" autocomplete="off">
+
+        <!-- Location Filter -->
+        <div class="form-group form-group--location">
+          <label class="form-label" for="location-input">📍 Location</label>
+          <input type="text" id="location-input" class="form-input" list="location-datalist" placeholder="Type or select a location..." autocomplete="off" />
+          <datalist id="location-datalist"></datalist>
+        </div>
+
+        <!-- Budget -->
+        <div class="form-group">
+          <label class="form-label">💰 Budget</label>
+          <div class="budget-group" id="budget-group" role="radiogroup" aria-label="Budget selection">
+            <button type="button" class="budget-btn" data-budget="Low">Low</button>
+            <button type="button" class="budget-btn" data-budget="Medium">Medium</button>
+            <button type="button" class="budget-btn" data-budget="High">High</button>
+          </div>
+        </div>
+
+        <!-- Cuisine Filter -->
+        <div class="form-group form-group--full">
+          <label class="form-label" for="cuisine-input">🍕 Cuisines (Select or type your own)</label>
+          <input type="text" id="cuisine-input" list="cuisine-datalist" placeholder="Type a custom cuisine..." autocomplete="off" class="form-input cuisine-text-input" style="margin-bottom: 0.5rem;" />
+          <datalist id="cuisine-datalist"></datalist>
+          <div class="cuisine-chips" id="cuisine-chips">
+            <!-- JS Populates popular chips -->
+          </div>
+        </div>
+
+        <!-- Minimum Rating -->
+        <div class="form-group">
+          <label class="form-label" for="rating-slider">⭐ Minimum Rating</label>
+          <div class="rating-slider-container">
+            <input
+              type="range"
+              class="rating-slider"
+              id="rating-slider"
+              name="min_rating"
+              min="1"
+              max="5"
+              step="0.5"
+              value="3"
+            >
+            <span class="rating-value" id="rating-value">3.0 ★</span>
+          </div>
+        </div>
+
+        <!-- Extras -->
+        <div class="form-group">
+          <label class="form-label">🏷️ Type</label>
+          <div class="extras-group" id="extras-group">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="submit-btn__text">
+            <span class="btn-label">🔍 Get Recommendations</span>
+            <span class="spinner"></span>
+          </span>
+        </button>
+
+      </form>
+    </section>
+
+    <!-- ─── Results ─── -->
+    <section class="results-section" id="results-section">
+      <div class="results-header" id="results-header">
+        <h2 class="results-title" id="results-title">Top Picks For You</h2>
+        <span class="results-count" id="results-count"></span>
+      </div>
+      <div class="results-grid" id="results-grid">
+        <!-- Cards injected by JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════ OFFLINE BANNER ═══════ -->
+  <div class="offline-banner" id="offline-banner">
+    ⚠️ You appear to be offline. Please check your connection.
+  </div>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    Recommendations based on historical data &middot;
+    Powered by AI &middot;
+    All prices in Indian Rupees (₹)
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
